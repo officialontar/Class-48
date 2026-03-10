@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+
+    {% block title %}
+        My Django App
+    {% endblock %}
+
+</title>
+
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+<body class="flex flex-col min-h-screen bg-gray-100">
+
+<!-- ================= NAVBAR ================= -->
+
+    {% include 'includes/header.html' %}
+
+    
+{% if messages %}
+{% for message in messages %}
+
+<script>
+
+let icon = "{{ message.tags }}";
+let color = "#3085d6";
+
+if (icon === "success") {
+    icon = "success";
+    color = "#16a34a"; // green
+}
+else if (icon === "error") {
+    icon = "error";
+    color = "#dc2626"; // red
+}
+else if (icon === "warning") {
+    icon = "warning";
+    color = "#f59e0b"; // yellow
+}
+else if (icon === "info") {
+    icon = "info";
+    color = "#2563eb"; // blue
+}
+
+Swal.fire({
+    icon: icon,
+    title: "{{ message }}",
+    confirmButtonColor: color,
+    timer: 3000,
+    timerProgressBar: true
+});
+
+</script>
+
+{% endfor %}
+{% endif %}
+
+<!-- ================= CONTENT ================= -->
+<main class="flex-grow p-10 text-center">
+
+    {% block content %}
+
+
+    {% endblock %}
+
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+    {% include 'includes/footer.html' %}
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<nav class="bg-gradient-to-r from-blue-600 to-indigo-600 shadow-lg">
+<div class="max-w-7xl mx-auto px-4">
+<div class="flex justify-between items-center h-16">
+
+<!-- Logo -->
+<div class="flex items-center space-x-2">
+<a href="#" class="text-white font-bold text-lg">MyCompany</a>
+</div>
+
+<!-- Menu -->
+<div class="flex items-center space-x-6">
+
+<a href="{% url 'index' %}" class="text-white hover:text-green-500 transition">Home</a>
+
+
+{% if request.user.is_authenticated %}
+
+<!-- Profile -->
+<a href="{% url 'profile' %}" class="flex items-center space-x-2 text-gray-700 hover:text-green-500 transition cursor-pointer">
+<img src="{{ request.user.profile_image.url }}" alt="profile" class="w-8 h-8 rounded-full">
+<span class="text-white hover:text-green-500 transition">{{ request.user.get_full_name }}</span>
+</a>
+
+<a href="{% url 'logout' %}" class="text-red-300 hover:text-red-500 transition">Logout</a>
+
+
+{% else %}
+
+<a href="{% url 'login' %}" class="text-white hover:text-green-500 transition">Login</a>
+
+<a href="{% url 'register' %}" class="text-white hover:text-green-500 transition">Register</a>
+{% endif %}
+
+</div>
+
+</div>
+</div>
+</nav>
