@@ -1,13 +1,10 @@
 from django.contrib import admin
-from .models import CustomUser
+from .models import CustomUser, RecruiterProfile, JobSeekerProfile
 
 
 
 # Register your models here.
+admin.site.register(CustomUser)
+admin.site.register(RecruiterProfile)
+admin.site.register(JobSeekerProfile)
 
-@admin.register(CustomUser)
-class CustomUserAdmin(admin.ModelAdmin):
-    list_display = ('id', 'first_name', 'last_name', 'username', 'email', 'phone', 'role', 'is_staff', 'is_active')
-    list_filter = ('role', 'is_staff', 'is_active')
-    search_fields = ('username', 'email', 'phone', 'role')
-    ordering = ('id',)
