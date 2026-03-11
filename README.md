@@ -1,12 +1,10 @@
 # Django Authentication System
 
 <p align="center">
-
-![Python](https://img.shields.io/badge/Python-3.12-blue)
-![Django](https://img.shields.io/badge/Django-5.0-green)
-![License](https://img.shields.io/badge/License-MIT-yellow)
-![Status](https://img.shields.io/badge/Project-Active-success)
-
+<img src="https://img.shields.io/badge/Python-3.12-blue">
+<img src="https://img.shields.io/badge/Django-5.0-green">
+<img src="https://img.shields.io/badge/License-MIT-yellow">
+<img src="https://img.shields.io/badge/Project-Active-success">
 </p>
 
 ---
@@ -20,7 +18,7 @@ The project demonstrates a clean Django project structure with reusable template
 
 ---
 
-## 🚀 Features
+## ✨ Features
 
 - User Registration
 - Secure Login System
@@ -31,20 +29,8 @@ The project demonstrates a clean Django project structure with reusable template
 - Django Messages Framework
 - Tailwind CSS UI
 - Responsive Navbar
-- Sticky Footer
-- Clean Django Project Structure
 
 ---
-
-## 📸 Project Preview
-
-Add a screenshot of your project inside the repository.
-
-Example folder:
-
-assets/project-preview.png
-
-Then it will appear like this:
 
 ## 📸 Project Preview
 
@@ -66,6 +52,7 @@ Then it will appear like this:
 
 ## 📁 Project Structure
 
+```
 Class-48
 │
 ├── accounts
@@ -84,8 +71,7 @@ Class-48
 │   ├── asgi.py
 │   ├── settings.py
 │   ├── urls.py
-│   ├── wsgi.py
-│   └── __pycache__
+│   └── wsgi.py
 │
 ├── templates
 │   ├── accounts
@@ -107,48 +93,60 @@ Class-48
 ├── manage.py
 ├── requirements.txt
 ├── README.md
-├── .gitignore
-└── db.sqlite3
+└── .gitignore
+```
 
 ---
 
 ## ⚙ Installation
 
-### Clone Repository
+Clone Repository
 
+```
 git clone https://github.com/officialontar/Class-48.git
+```
 
-### Go to Project Folder
+Go to Project Folder
 
+```
 cd Class-48
+```
 
-### Create Virtual Environment
+Create Virtual Environment
 
+```
 python -m venv .venv
+```
 
-### Activate Environment
+Activate Environment
 
-Windows
-
+```
 .venv\Scripts\activate
+```
 
-### Install Dependencies
+Install Dependencies
 
+```
 pip install -r requirements.txt
+```
 
-### Run Migrations
+Run Migrations
 
+```
 python manage.py migrate
+```
 
-### Run Server
+Run Server
 
+```
 python manage.py runserver
+```
 
 ---
 
 ## 👨‍💻 Author
 
-Sakib Khan
+Sakib Khan  
 
 GitHub  
 https://github.com/officialontar
