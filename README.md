@@ -100,43 +100,45 @@ Class-48
 
 ## ⚙ Installation
 
-Clone Repository
+### 1️⃣ Clone Repository
 
 ```
 git clone https://github.com/officialontar/Class-48.git
 ```
 
-Go to Project Folder
+### 2️⃣ Go to Project Folder
 
 ```
 cd Class-48
 ```
 
-Create Virtual Environment
+### 3️⃣ Create Virtual Environment
 
 ```
 python -m venv .venv
 ```
 
-Activate Environment
+### 4️⃣ Activate Environment
+
+Windows
 
 ```
 .venv\Scripts\activate
 ```
 
-Install Dependencies
+### 5️⃣ Install Dependencies
 
 ```
 pip install -r requirements.txt
 ```
 
-Run Migrations
+### 6️⃣ Run Migrations
 
 ```
 python manage.py migrate
 ```
 
-Run Server
+### 7️⃣ Run Server
 
 ```
 python manage.py runserver
